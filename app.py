@@ -12,7 +12,7 @@ app = Flask(__name__)
 def man():
     return render_template('home.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST', 'GET'])
 def home():
     a = request.form['a']
     b = request.form['b']
@@ -25,7 +25,7 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080, debug=False)   
+    app.run()   
 
 # @app.route('/predict1')
 # def predict1():
